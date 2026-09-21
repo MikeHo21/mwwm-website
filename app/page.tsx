@@ -8,22 +8,45 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            {/* 精確且成比例的 MWWM SVG Logo */}
+            {/* 精確對應真實 Logo 的上下對稱立體漸層 SVG */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 649 582"
+              viewBox="0 0 500 500"
               className="h-10 w-auto object-contain"
             >
               <defs>
-                <linearGradient id="mwwmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#2D1290" />
-                  <stop offset="50%" stopColor="#1D0A68" />
-                  <stop offset="100%" stopColor="#120542" />
+                {/* 上半部深色 */}
+                <linearGradient id="topGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#2b1a7a" />
+                  <stop offset="100%" stopColor="#311c87" />
+                </linearGradient>
+                {/* 下半部深色 */}
+                <linearGradient id="bottomGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#311c87" />
+                  <stop offset="100%" stopColor="#2b1a7a" />
+                </linearGradient>
+                {/* 中間金屬反光帶 */}
+                <linearGradient id="shineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#311c87" />
+                  <stop offset="50%" stopColor="#ffffff" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#311c87" />
                 </linearGradient>
               </defs>
+
+              {/* 上半部主體 */}
               <path
-                d="M649 1L578 1L533 162L490 2L411 3L367 162L323 3L249 2L205 162L160 2L75 3L0 292L76 582L161 582L204 424L249 582L322 581L367 423L414 582L491 582L533 423L577 583L649 583L577 292Z"
-                fill="url(#mwwmGrad)"
+                d="M30 20 L120 250 L180 100 L250 250 L310 100 L380 250 L470 20 L400 20 L345 150 L280 20 L215 150 L160 20 Z"
+                fill="url(#topGrad)"
+              />
+              {/* 下半部主體 (鏡像) */}
+              <path
+                d="M30 480 L120 250 L180 400 L250 250 L310 400 L380 250 L470 480 L400 480 L345 350 L280 480 L215 350 L160 480 Z"
+                fill="url(#bottomGrad)"
+              />
+              {/* 中間交錯的水平金屬光澤反光層 */}
+              <polygon
+                points="120,250 180,250 250,250 310,250 380,250 400,280 345,280 280,280 215,280 160,280"
+                fill="url(#shineGrad)"
               />
             </svg>
           </Link>
