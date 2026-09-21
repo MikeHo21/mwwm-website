@@ -86,9 +86,9 @@ export default function Home() {
             </p>
             <div className="space-y-2 text-slate-600 mt-6">
               <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 10]</p>
-              <p><strong className="text-slate-900">負責人 / 聯絡人：</strong>Mike He[cite: 10]</p>
-              <p><strong className="text-slate-900">電話：</strong>+852 5229 0248[cite: 10]</p>
-              <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk[cite: 10]</p>
+              <p><strong className="text-slate-900">負責人 / 聯絡人：</strong>Mike He</p>
+              <p><strong className="text-slate-900">電話：</strong>+852 5229 0248</p>
+              <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk</p>
             </div>
           </div>
           <div className="bg-slate-200 h-64 rounded-2xl flex items-center justify-center text-slate-400 font-medium">
@@ -109,10 +109,10 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">公司資訊</h3>
               <p className="text-slate-300 mb-2"><strong>MWWM (HONG KONG) LIMITED</strong></p>
-              <p className="text-slate-300 mb-2">香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 10]</p>
-              <p className="text-slate-300 mb-2">聯絡人：Mike He[cite: 10]</p>
-              <p className="text-slate-300 mb-2">電話：+852 5229 0248[cite: 10]</p>
-              <p className="text-slate-300">信箱：cs@mwwm.com.hk[cite: 10]</p>
+              <p className="text-slate-300 mb-2">香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室</p>
+              <p className="text-slate-300 mb-2">聯絡人：Mike He</p>
+              <p className="text-slate-300 mb-2">電話：+852 5229 0248</p>
+              <p className="text-slate-300">信箱：cs@mwwm.com.hk</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">服務時間</h3>
