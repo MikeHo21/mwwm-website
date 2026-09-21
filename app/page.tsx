@@ -8,17 +8,43 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img
-              src="/images/mwwm-logo.svg"
-              alt="MWWM Logo"
+            {/* 直接內嵌 SVG，解決所有檔案載入與破圖問題 */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1000 800"
               className="h-10 w-auto object-contain"
-            />
+            >
+              <defs>
+                <linearGradient id="topGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#1D0A68" />
+                  <stop offset="75%" stopColor="#2D1290" />
+                  <stop offset="94%" stopColor="#6F53D6" />
+                  <stop offset="100%" stopColor="#B3A2F8" />
+                </linearGradient>
+                <linearGradient id="bottomGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#B3A2F8" />
+                  <stop offset="6%" stopColor="#6F53D6" />
+                  <stop offset="25%" stopColor="#2D1290" />
+                  <stop offset="100%" stopColor="#1D0A68" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M 180,80 L 260,80 L 310,220 L 360,80 L 440,80 L 490,220 L 540,80 L 620,80 L 670,220 L 720,80 L 800,80 L 660,400 L 605,315 L 550,400 L 495,315 L 440,400 L 385,315 L 320,400 Z"
+                fill="url(#topGrad)"
+              />
+              <path
+                d="M 320,400 L 385,485 L 440,400 L 495,485 L 550,400 L 605,485 L 660,400 L 800,720 L 720,720 L 670,580 L 620,720 L 540,720 L 490,580 L 440,720 L 360,720 L 310,580 L 260,720 L 180,720 Z"
+                fill="url(#bottomGrad)"
+              />
+            </svg>
           </Link>
+
           <nav className="hidden md:flex space-x-8 font-medium text-slate-600">
             <a href="#about" className="hover:text-blue-600 transition">關於我們</a>
             <a href="#services" className="hover:text-blue-600 transition">專業服務</a>
             <a href="#contact" className="hover:text-blue-600 transition">聯絡我們</a>
           </nav>
+
           <a 
             href="#contact" 
             className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition shadow-sm"
@@ -126,3 +152,4 @@ export default function Home() {
       </footer>
     </div>
   );
+}
