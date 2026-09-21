@@ -8,7 +8,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            {/* Logo 高度已調整為 1.5 倍 (h-28) */}
+            {/* 使用原本的向量 SVG Logo 並維持適當大小 */}
             <img
               src="/images/mwwm-logo.svg"
               alt="MWWM Logo"
@@ -80,16 +80,19 @@ export default function Home() {
       <section id="about" className="py-20 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">關於 MWWM</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">關於 MWWM (HONG KONG) LIMITED</h2>
             <p className="text-slate-600 mb-4 leading-relaxed">
-              我們擁有專業的團隊與豐富的實務經驗，始終秉持著「品質、創新、客戶至上」的經營理念。
+              我們擁有專業的團隊與豐富的實務經驗，始終秉持著「品質、創新、客戶至上」的經營理念，為客戶提供最精準的客製化方案。
             </p>
-            <p className="text-slate-600 leading-relaxed">
-              無論是小型企業或是大型組織，我們皆能提供最精準的客製化方案，陪伴客戶共同成長。
-            </p>
+            <div className="space-y-2 text-slate-600 mt-6">
+              <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 10]</p>
+              <p><strong className="text-slate-900">負責人 / 聯絡人：</strong>Mike He[cite: 10]</p>
+              <p><strong className="text-slate-900">電話：</strong>+852 5229 0248[cite: 10]</p>
+              <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk[cite: 10]</p>
+            </div>
           </div>
           <div className="bg-slate-200 h-64 rounded-2xl flex items-center justify-center text-slate-400 font-medium">
-            [ 公司形象圖片區塊 ]
+            [ 公司辦公環境 / 形象圖片 ]
           </div>
         </div>
       </section>
@@ -99,8 +102,25 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">聯絡我們</h2>
-            <p className="text-slate-400">填寫下方表單，我們的專員將會盡快與您聯繫。</p>
+            <p className="text-slate-400">填寫下方表單或直接透過聯絡方式與我們取得聯繫。</p>
           </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 mb-12 bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-white">公司資訊</h3>
+              <p className="text-slate-300 mb-2"><strong>MWWM (HONG KONG) LIMITED</strong></p>
+              <p className="text-slate-300 mb-2">香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 10]</p>
+              <p className="text-slate-300 mb-2">聯絡人：Mike He[cite: 10]</p>
+              <p className="text-slate-300 mb-2">電話：+852 5229 0248[cite: 10]</p>
+              <p className="text-slate-300">信箱：cs@mwwm.com.hk[cite: 10]</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-white">服務時間</h3>
+              <p className="text-slate-300 mb-2">星期一至星期五：09:00 - 18:00</p>
+              <p className="text-slate-300 mb-2">星期六、日及公眾假期：休息</p>
+            </div>
+          </div>
+
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
