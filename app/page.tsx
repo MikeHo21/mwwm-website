@@ -7,12 +7,12 @@ export default function Home() {
       {/* 1. 導覽列 Navbar */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-          {/* 左側 Logo：設定高度與導覽列白色區塊等高 (h-full py-2) */}
-          <Link href="/" className="flex items-center h-full py-2">
+          {/* 左側 Logo：設定 h-full 讓上下邊線與背景條上下線完全重合 */}
+          <Link href="/" className="flex items-center h-full">
             <img
               src="/images/mwwm-logo.svg"
               alt="MWWM Logo"
-              className="h-full w-auto object-contain"
+              className="h-full w-auto object-contain py-1"
             />
           </Link>
 
