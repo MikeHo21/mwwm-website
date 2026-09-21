@@ -6,13 +6,13 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* 1. 導覽列 Navbar */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-          {/* 左側 Logo：設定 h-full 讓上下邊線與背景條上下線完全重合 */}
+        <div className="max-w-6xl mx-auto px-6 h-32 flex justify-between items-center">
+          {/* 左側 Logo：Header 高度增至 1.5 倍 (h-32)，Logo 設為 h-full 讓上下邊線與 header 上下線完美重合 */}
           <Link href="/" className="flex items-center h-full">
             <img
               src="/images/mwwm-logo.svg"
               alt="MWWM Logo"
-              className="h-full w-auto object-contain py-1"
+              className="h-full w-auto object-contain"
             />
           </Link>
 
@@ -24,7 +24,7 @@ export default function Home() {
 
           <a 
             href="#contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition shadow-sm"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-sm"
           >
             立即諮詢
           </a>
@@ -85,10 +85,10 @@ export default function Home() {
               我們擁有專業的團隊與豐富的實務經驗，始終秉持著「品質、創新、客戶至上」的經營理念，為客戶提供最精準的客製化方案。
             </p>
             <div className="space-y-2 text-slate-600 mt-6">
-              <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 8]</p>
+              <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 7]</p>
               <p><strong className="text-slate-900">負責人 / 聯絡人：</strong>Mike He</p>
               <p><strong className="text-slate-900">電話：</strong>+852 5229 0248</p>
-              <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk[cite: 8]</p>
+              <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk[cite: 7]</p>
             </div>
           </div>
           <div className="bg-slate-200 h-64 rounded-2xl flex items-center justify-center text-slate-400 font-medium">
@@ -109,10 +109,10 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">公司資訊</h3>
               <p className="text-slate-300 mb-2"><strong>MWWM (HONG KONG) LIMITED</strong></p>
-              <p className="text-slate-300 mb-2">香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 8]</p>
+              <p className="text-slate-300 mb-2">香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 7]</p>
               <p className="text-slate-300 mb-2">聯絡人：Mike He</p>
               <p className="text-slate-300 mb-2">電話：+852 5229 0248</p>
-              <p className="text-slate-300">信箱：cs@mwwm.com.hk[cite: 8]</p>
+              <p className="text-slate-300">信箱：cs@mwwm.com.hk[cite: 7]</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">服務時間</h3>
