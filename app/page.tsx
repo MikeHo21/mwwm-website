@@ -85,7 +85,7 @@ export default function Home() {
               我們擁有專業的團隊與豐富的實務經驗，始終秉持著「品質、創新、客戶至上」的經營理念，為客戶提供最精準的客製化方案。
             </p>
             <div className="space-y-2 text-slate-600 mt-6">
-              <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室[cite: 10]</p>
+              <p><strong className="text-slate-900">地址：</strong>香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室</p>
               <p><strong className="text-slate-900">負責人 / 聯絡人：</strong>Mike He</p>
               <p><strong className="text-slate-900">電話：</strong>+852 5229 0248</p>
               <p><strong className="text-slate-900">電郵：</strong>cs@mwwm.com.hk</p>
