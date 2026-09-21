@@ -9,13 +9,13 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo-vector.svg"
-              alt="MWWM Logo"
-              width={140}
-              height={45}
-              priority
-              className="h-10 w-auto object-contain"
+            <Link href="/" className="flex items-center">
+  <img
+    src="/images/mwwm-logo.svg"
+    alt="MWWM Logo"
+    className="h-10 w-auto object-contain"
+  />
+</Link>
             />
           </Link>
           <nav className="hidden md:flex space-x-8 font-medium text-slate-600">
@@ -130,4 +130,3 @@ export default function Home() {
       </footer>
     </div>
   );
-}
