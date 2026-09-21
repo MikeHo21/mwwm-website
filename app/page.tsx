@@ -8,33 +8,22 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            {/* 精確內嵌 MWWM 向量 Logo */}
+            {/* 精確且成比例的 MWWM SVG Logo */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1000 800"
+              viewBox="0 0 649 582"
               className="h-10 w-auto object-contain"
             >
               <defs>
-                <linearGradient id="topGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#1D0A68" />
-                  <stop offset="75%" stopColor="#2D1290" />
-                  <stop offset="94%" stopColor="#6F53D6" />
-                  <stop offset="100%" stopColor="#B3A2F8" />
-                </linearGradient>
-                <linearGradient id="bottomGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#B3A2F8" />
-                  <stop offset="6%" stopColor="#6F53D6" />
-                  <stop offset="25%" stopColor="#2D1290" />
-                  <stop offset="100%" stopColor="#1D0A68" />
+                <linearGradient id="mwwmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#2D1290" />
+                  <stop offset="50%" stopColor="#1D0A68" />
+                  <stop offset="100%" stopColor="#120542" />
                 </linearGradient>
               </defs>
               <path
-                d="M 180,80 L 260,80 L 310,220 L 360,80 L 440,80 L 490,220 L 540,80 L 620,80 L 670,220 L 720,80 L 800,80 L 660,400 L 605,315 L 550,400 L 495,315 L 440,400 L 385,315 L 320,400 Z"
-                fill="url(#topGrad)"
-              />
-              <path
-                d="M 320,400 L 385,485 L 440,400 L 495,485 L 550,400 L 605,485 L 660,400 L 800,720 L 720,720 L 670,580 L 620,720 L 540,720 L 490,580 L 440,720 L 360,720 L 310,580 L 260,720 L 180,720 Z"
-                fill="url(#bottomGrad)"
+                d="M649 1L578 1L533 162L490 2L411 3L367 162L323 3L249 2L205 162L160 2L75 3L0 292L76 582L161 582L204 424L249 582L322 581L367 423L414 582L491 582L533 423L577 583L649 583L577 292Z"
+                fill="url(#mwwmGrad)"
               />
             </svg>
           </Link>
