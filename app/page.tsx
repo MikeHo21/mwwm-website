@@ -8,7 +8,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            {/* 直接內嵌 SVG，解決所有檔案載入與破圖問題 */}
+            {/* 精確內嵌 MWWM 向量 Logo */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1000 800"
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 頁尾 Footer */}
+      {/* 6. 頁尾 Footer */}
       <footer className="bg-slate-950 text-slate-500 py-8 text-center text-sm border-t border-slate-800">
         © {new Date().getFullYear()} MWWM (HONG KONG) LIMITED. All rights reserved.
       </footer>
