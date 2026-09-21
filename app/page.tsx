@@ -8,19 +8,16 @@ export default function Home() {
       {/* 1. 導覽列 Navbar */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-600 tracking-tight">
-            // 將原本的 <Link>MWWM | 企業官網</Link> 區塊替換為：
-<Link href="/" className="flex items-center">
-  <Image
-    src="/images/mwwm-logo.svg"
-    alt="MWWM Logo"
-    width={140}
-    height={45}
-    priority
-    className="h-10 w-auto object-contain"
-  />
-</Link>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo-vector.svg"
+              alt="MWWM Logo"
+              width={140}
+              height={45}
+              priority
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
           <nav className="hidden md:flex space-x-8 font-medium text-slate-600">
             <a href="#about" className="hover:text-blue-600 transition">關於我們</a>
             <a href="#services" className="hover:text-blue-600 transition">專業服務</a>
