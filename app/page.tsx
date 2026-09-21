@@ -8,11 +8,11 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            {/* 直接使用原生 img 標籤調用你放在 public 內的 SVG 原圖，100% 不失真不變形 */}
+            {/* Logo 高度已放大到 2 倍 (h-20) */}
             <img
               src="/images/mwwm-logo.svg"
               alt="MWWM Logo"
-              className="h-10 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </Link>
 
