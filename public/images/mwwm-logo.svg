@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130" role="img" aria-labelledby="title desc">
+  <title id="title">Geometric W logo</title>
+  <desc id="desc">Editable vector recreation of the supplied geometric W logo.</desc>
+  <defs>
+    <!-- Same deep-blue palette as the lower glow, spread over a slightly wider upper transition. -->
+    <linearGradient id="upperBlueGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b1b72"/>
+      <stop offset="42.4%" stop-color="#2b1b72"/>
+      <stop offset="65.8%" stop-color="#30227a"/>
+      <stop offset="87.4%" stop-color="#504494"/>
+      <stop offset="100%" stop-color="#9892c1"/>
+    </linearGradient>
+    <!-- The identical palette reversed, with a slightly wider lower transition. -->
+    <linearGradient id="lowerBlueGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9892c1"/>
+      <stop offset="12.6%" stop-color="#504494"/>
+      <stop offset="27%" stop-color="#30227a"/>
+      <stop offset="50.4%" stop-color="#2b1b72"/>
+      <stop offset="100%" stop-color="#2b1b72"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1130" fill="#ffffff"/>
+
+  <!-- Upper W -->
+  <path fill="url(#upperBlueGlow)" d="
+    M286 552 L401 110 L530 109 L598 357 L665 110 L777 110
+    L845 357 L912 110 L1034 110 L1098 357 L1167 108 L1275 107
+    L1167 552 L1029 552 L981 348 L931 552 L765 552 L717 348
+    L668 552 L527 552 L478 348 L430 552 Z"/>
+
+  <!-- Lower W -->
+  <path fill="url(#lowerBlueGlow)" d="
+    M286 554 L430 554 L478 756 L527 554 L668 554 L717 756
+    L765 554 L931 554 L981 756 L1029 554 L1167 554 L1275 995
+    L1166 995 L1098 748 L1034 994 L912 994 L845 748 L777 994
+    L665 993 L598 748 L530 993 L401 993 Z"/>
+
+  <!-- Very narrow central white line from the reference image. -->
+  <path d="M286 552 L430 552 M527 552 L668 552 M765 552 L931 552 M1029 552 L1167 552"
+        fill="none" stroke="#ffffff" stroke-width="0.7" stroke-linecap="butt" vector-effect="non-scaling-stroke"/>
+</svg>
