@@ -1,4 +1,3 @@
-'html lang="zh-Hant"';
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -65,7 +64,7 @@ export default function Home() {
       partnersTitle: '合作商与技术支持',
       partnersSubtitle: '感谢以下行业翘楚与技术伙伴的鼎力支持与紧密合作',
       contactTitle: '联络我们',
-      contactSubtitle: '填写下方表单或直接透过联络方式与我们取得联系。',
+      contactSubtitle: '填写下方表单或直接透过联絡方式与我们取得联系。',
       companyInfo: '公司资讯',
       serviceHours: '服务时间',
       hoursText: '星期一至星期五：09:00 - 18:00\n星期六、日及公众假期：休息',
@@ -166,7 +165,7 @@ export default function Home() {
       {/* 2. Hero 視覺主區塊 */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-          {t.heroTitle.split('方案供應商')[0]}<span className="text-blue-600">專業商業用品及方案供應商</span>
+          為您的業務提供 <span className="text-blue-600">專業商業用品及方案供應商</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
           {t.heroSubtitle}
