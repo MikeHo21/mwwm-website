@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -64,7 +66,7 @@ export default function Home() {
       partnersTitle: '合作商与技术支持',
       partnersSubtitle: '感谢以下行业翘楚与技术伙伴的鼎力支持与紧密合作',
       contactTitle: '联络我们',
-      contactSubtitle: '填写下方表单或直接透过联絡方式与我们取得联系。',
+      contactSubtitle: '填写下方表单或直接透过联络方式与我们取得联系。',
       companyInfo: '公司资讯',
       serviceHours: '服务时间',
       hoursText: '星期一至星期五：09:00 - 18:00\n星期六、日及公众假期：休息',
