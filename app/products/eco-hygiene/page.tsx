@@ -104,9 +104,9 @@ export default function EcoHygienePage() {
         <div className="grid md:grid-cols-3 gap-8">
           {t.items.map((item, index) => (
             <div key={index} className="bg-slate-800/80 border border-slate-700 rounded-2xl overflow-hidden shadow-lg hover:border-blue-500 transition flex flex-col">
-              {/* 上方圖片預留區 */}
-              <div className="w-full h-52 bg-slate-950 flex items-center justify-center text-slate-500 border-b border-slate-700 relative">
-                <span className="text-sm">[ 產品圖片 / Product Image ]</span>
+              {/* 上方產品圖片 */}
+              <div className="w-full h-56 bg-slate-950 overflow-hidden border-b border-slate-700 relative">
+                <img src={item.img} alt={item.name} className="w-full h-full object-cover hover:scale-105 transition duration-500" />
               </div>
               {/* 下方名稱與說明 */}
               <div className="p-6 flex flex-col flex-grow justify-between">
