@@ -6,6 +6,47 @@ import Link from 'next/link';
 export default function ContactPage() {
   const [lang, setLang] = useState<'tc' | 'sc' | 'en'>('tc');
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  // 將下方網址換成你在 Formspree 取得的專屬 Endpoint
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xoevwgll';
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          setError(data.errors.map((error: any) => error.message).join(', '));
+        } else {
+          setError(lang === 'en' ? 'Oops! There was a problem submitting your form' : '發送失敗，請稍後再試。');
+        }
+      }
+    } catch (err) {
+      setError(lang === 'en' ? 'Network error. Please try again later.' : '網路連線異常，請稍後再試。');
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   const content = {
     tc: {
@@ -19,6 +60,8 @@ export default function ContactPage() {
       emailLabel: '電郵地址',
       message: '諮詢內容',
       submit: '送出訊息',
+      submitting: '發送中...',
+      successMsg: '感謝您的諮詢！我們已收到您的訊息，將盡快與您聯繫。',
       navAbout: '關於我們',
       navProducts: '產品列表',
       navEco: '環保產品 (專業環境衛生)',
@@ -37,6 +80,8 @@ export default function ContactPage() {
       emailLabel: '电邮地址',
       message: '咨询内容',
       submit: '送出讯息',
+      submitting: '发送中...',
+      successMsg: '感谢您的咨询！我们已收到您的讯息，将尽快与您联系。',
       navAbout: '关于我们',
       navProducts: '产品列表',
       navEco: '环保产品 (专业环境卫生)',
@@ -55,6 +100,8 @@ export default function ContactPage() {
       emailLabel: 'Email Address',
       message: 'Message',
       submit: 'Send Message',
+      submitting: 'Sending...',
+      successMsg: 'Thank you for your inquiry! We have received your message and will get back to you shortly.',
       navAbout: 'About Us',
       navProducts: 'Products',
       navEco: 'Eco-Friendly & Hygiene',
@@ -122,25 +169,33 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="space-y-6 bg-slate-800/80 p-8 rounded-2xl border border-slate-700 shadow-lg">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">{t.name}</label>
-              <input type="text" className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500" />
+        {submitted ? (
+          <div className="bg-emerald-900/50 border border-emerald-500 p-8 rounded-2xl text-center text-emerald-200 shadow-lg">
+            <h3 className="text-2xl font-bold mb-2">🎉 恭喜！</h3>
+            <p className="text-lg">{t.successMsg}</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-6 bg-slate-800/80 p-8 rounded-2xl border border-slate-700 shadow-lg">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">{t.name}</label>
+                <input type="text" name="name" required className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-300 mb-2">{t.emailLabel}</label>
+                <input type="email" name="email" required className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500" placeholder="name@example.com" />
+              </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">{t.emailLabel}</label>
-              <input type="email" className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500" placeholder="name@example.com" />
+              <label className="block text-sm font-medium text-slate-300 mb-2">{t.message}</label>
+              <textarea name="message" rows={4} required className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500"></textarea>
             </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-300 mb-2">{t.message}</label>
-            <textarea rows={4} className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500"></textarea>
-          </div>
-          <button type="button" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-lg transition shadow-md">
-            {t.submit}
-          </button>
-        </form>
+            {error && <p className="text-rose-400 text-sm">{error}</p>}
+            <button type="submit" disabled={submitting} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-lg transition shadow-md disabled:opacity-50">
+              {submitting ? t.submitting : t.submit}
+            </button>
+          </form>
+        )}
       </main>
 
       <footer className="bg-slate-950 text-slate-400 py-8 text-center text-sm border-t border-slate-800 mt-20">
