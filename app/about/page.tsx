@@ -3,20 +3,19 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function HotelCustomPage() {
+export default function AboutPage() {
   const [lang, setLang] = useState<'tc' | 'sc' | 'en'>('tc');
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const content = {
     tc: {
       backHome: '← 返回首頁',
-      title: '高端酒店定制產品',
-      subtitle: '專注高端布草與酒店定制用品，融合美學與實用性，滿足頂級飯店與商業空間的嚴格標準。',
-      items: [
-        { name: '高端酒店布草系列', desc: '採用頂級精梳棉與高支高密織造技術，打造極致舒適的床品與毛巾系列。' },
-        { name: '訂製客房備品與配套', desc: '為頂級飯店提供獨家美學設計與環保材質結合的客房日常消耗品與定製配件。' },
-        { name: '商業空間美學布藝', desc: '針對高端餐飲與會所空間的專屬布藝軟裝定制服務。' }
-      ],
+      aboutTitle: '關於 MWWM (HONG KONG) LIMITED',
+      aboutText: '我們擁有專業的團隊與豐富的實務經驗，公司在中國內地有深度合作的定制工廠，亦同美國技術公司共同開發產品，利用香港本地化的專業團隊，將中國的製造實力同美國的設計理念注入香港本地發展，秉持「品質、創新、客戶至上」的經營理念，特別是在蟲控衛生領域和高端布草領域成為香港本地的卓越產品供應商，為客戶提供最精準的客製化方案。',
+      addr: '地址：香港葵涌貨櫃碼頭路88號永得利廣場2期11樓09室',
+      contactPerson: '負責人 / 聯絡人：Mike He',
+      phone: '電話：+852 5229 0248',
+      email: '電郵：cs@mwwm.com.hk',
       navAbout: '關於我們',
       navProducts: '產品列表',
       navEco: '環保產品 (專業環境衛生)',
@@ -26,13 +25,12 @@ export default function HotelCustomPage() {
     },
     sc: {
       backHome: '← 返回首页',
-      title: '高端酒店定制产品',
-      subtitle: '专注高端布草与酒店定制用品，融合美学与实用性，满足顶级饭店与商业空间的严格标准。',
-      items: [
-        { name: '高端酒店布草系列', desc: '采用顶级精梳棉与高支高密织造技术，打造极致舒适的床品与毛巾系列。' },
-        { name: '订制客房备品与配套', desc: '为顶级饭店提供独家美学设计与环保材质结合的客房日常消耗品与定制配件。' },
-        { name: '商业空间美学布艺', desc: '针对高端餐饮与会所空间的专属布艺软装定制服务。' }
-      ],
+      aboutTitle: '关于 MWWM (HONG KONG) LIMITED',
+      aboutText: '我们拥有专业的团队与丰富的实务经验，公司在中国内地有深度合作的定制工厂，亦同美国技术公司共同开发产品，利用香港本地化的专业团队，将中国的制造实力同美国的设计理念注入香港本地发展，秉持「品质、创新、客户至上」的经营理念，特别是在虫控卫生领域和高端布草领域成为香港本地的卓越产品供应商，为客户提供最精准的定制化方案。',
+      addr: '地址：香港葵涌货柜码头路88号永得利广场2期11楼09室',
+      contactPerson: '负责人 / 联络人：Mike He',
+      phone: '电话：+852 5229 0248',
+      email: '电邮：cs@mwwm.com.hk',
       navAbout: '关于我们',
       navProducts: '产品列表',
       navEco: '环保产品 (专业环境卫生)',
@@ -42,13 +40,12 @@ export default function HotelCustomPage() {
     },
     en: {
       backHome: '← Back to Home',
-      title: 'High-End Hotel Custom Products',
-      subtitle: 'Specializing in premium linens and bespoke hotel amenities, blending aesthetics with functionality for elite hospitality spaces.',
-      items: [
-        { name: 'Premium Hotel Linens', desc: 'Crafted with top-grade combed cotton and high-density weaving for supreme comfort in beddings and towels.' },
-        { name: 'Bespoke Room Amenities', desc: 'Exclusive aesthetic designs combined with eco-friendly materials for elite hotel daily amenities.' },
-        { name: 'Commercial Space Textile Art', desc: 'Tailored soft furnishing and textile customization for high-end dining and club spaces.' }
-      ],
+      aboutTitle: 'About MWWM (HONG KONG) LIMITED',
+      aboutText: 'We possess a professional team and rich practical experience. With deeply collaborated custom manufacturing plants in mainland China and co-development partnerships with U.S. technology companies, we leverage our localized professional team in Hong Kong to integrate China’s manufacturing prowess with American design philosophies. Upholding our philosophy of "Quality, Innovation, and Customer First," we have become a premier product supplier in Hong Kong, particularly in pest control hygiene and high-end linens, delivering precise tailored solutions for our clients.',
+      addr: 'Address: Room 09, 11/F, Tower 2, Ever Gain Plaza, 88 Container Port Road, Kwai Chung, Hong Kong',
+      contactPerson: 'Contact Person: Mike He',
+      phone: 'Phone: +852 5229 0248',
+      email: 'Email: cs@mwwm.com.hk',
       navAbout: 'About Us',
       navProducts: 'Products',
       navEco: 'Eco-Friendly & Hygiene',
@@ -62,16 +59,15 @@ export default function HotelCustomPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
-      {/* Header */}
       <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/60 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 h-28 flex justify-between items-center">
           <Link href="/" className="flex items-center h-full py-2">
             <img src="/images/mwwm-logo.svg" alt="MWWM Logo" className="h-full w-auto object-contain filter brightness-110" />
           </Link>
           <nav className="hidden md:flex space-x-6 font-medium text-slate-200 items-center">
-            <Link href="/about" className="hover:text-blue-400 transition">{t.navAbout}</Link>
+            <Link href="/about" className="hover:text-blue-400 transition text-blue-400 font-semibold">{t.navAbout}</Link>
             <div className="relative py-2" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
-              <button className="flex items-center gap-1 hover:text-blue-400 transition text-blue-400 font-semibold">
+              <button className="flex items-center gap-1 hover:text-blue-400 transition">
                 {t.navProducts}
                 <svg className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -80,7 +76,7 @@ export default function HotelCustomPage() {
               {dropdownOpen && (
                 <div className="absolute top-full left-0 w-80 bg-slate-800 border border-slate-700 rounded-xl shadow-2xl py-2 mt-1 z-50">
                   <Link href="/products/eco-hygiene" className="block px-4 py-3 text-sm text-slate-200 hover:bg-blue-600/30 hover:text-blue-300 transition">{t.navEco}</Link>
-                  <Link href="/products/hotel-custom" className="block px-4 py-3 text-sm text-blue-300 bg-blue-600/20 font-semibold">{t.navHotel}</Link>
+                  <Link href="/products/hotel-custom" className="block px-4 py-3 text-sm text-slate-200 hover:bg-blue-600/30 hover:text-blue-300 transition">{t.navHotel}</Link>
                 </div>
               )}
             </div>
@@ -95,29 +91,17 @@ export default function HotelCustomPage() {
         </div>
       </header>
 
-      {/* 內容區塊：網格排版（上圖下名稱） */}
-      <main className="max-w-6xl mx-auto px-6 py-16">
+      <main className="max-w-4xl mx-auto px-6 py-16">
         <Link href="/" className="text-blue-400 hover:underline inline-block mb-6 font-medium">{t.backHome}</Link>
-        <h1 className="text-4xl font-extrabold text-white mb-4">{t.title}</h1>
-        <p className="text-slate-300 text-lg mb-12 leading-relaxed">{t.subtitle}</p>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {t.items.map((item, index) => (
-            <div key={index} className="bg-slate-800/80 border border-slate-700 rounded-2xl overflow-hidden shadow-lg hover:border-blue-500 transition flex flex-col">
-              <div className="w-full h-52 bg-slate-950 flex items-center justify-center text-slate-500 border-b border-slate-700">
-                <span className="text-sm">[ 產品圖片 / Hotel Product Image ]</span>
-              </div>
-              <div className="p-6 flex flex-col flex-grow justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-blue-300 mb-3">{item.name}</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-                <Link href="/contact" className="mt-6 inline-block text-center bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white py-2 rounded-lg text-sm font-semibold transition">
-                  立即詢問
-                </Link>
-              </div>
-            </div>
-          ))}
+        <h1 className="text-4xl font-extrabold text-white mb-8">{t.aboutTitle}</h1>
+        <div className="bg-slate-800/80 border border-slate-700 p-8 rounded-2xl shadow-lg space-y-6">
+          <p className="text-slate-300 leading-relaxed text-lg">{t.aboutText}</p>
+          <div className="border-t border-slate-700 pt-6 space-y-3 text-slate-200">
+            <p><strong className="text-white">{t.addr}</strong></p>
+            <p><strong className="text-white">{t.contactPerson}</strong></p>
+            <p><strong className="text-white">{t.phone}</strong></p>
+            <p><strong className="text-white">{t.email}</strong></p>
+          </div>
         </div>
       </main>
 
